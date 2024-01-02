@@ -1,5 +1,9 @@
+//coded on 2024 01 02
+//coded with minimal use of GPT code refactoring, only asked how to use
+//the syntax and then I used trial and error to get it working;
+// what I learned - you can make a function run itself again, making a loop this way;
+// tik veliau suzinojau, kad setTimeout nera gera praktika ir priveda prie didesniu problemu veliau
 
-//<p id="par1element"></p>
 
 let H1_ELEMENT =document.getElementById("h1element").textContent = "Hello";
 let texterTracker = 0;
@@ -29,19 +33,12 @@ function texter2(){
 
 function texter3(){
     let H1_ELEMENT = document.getElementById("h1element");
-    if (H1_ELEMENT.textContent === "heLlo") {
-        H1_ELEMENT.textContent = "helLo";
-    }
-}; 
-
-function texter4(){
-    let H1_ELEMENT = document.getElementById("h1element");
     if (H1_ELEMENT.textContent === "helLo") {
         H1_ELEMENT.textContent = "hellO";
     }
 }; 
 
-function texter5(){
+function texter4(){
     let H1_ELEMENT = document.getElementById("h1element");
     if (H1_ELEMENT.textContent === "hellO") {
         H1_ELEMENT.textContent = "Hello";
@@ -55,16 +52,13 @@ function starter(){
         setTimeout(texter1, 1000);
         setTimeout(texter2, 1500);
         setTimeout(texter3, 2000);
-        setTimeout(texter4, 2000);
-        setTimeout(texter5, 2500);
+        setTimeout(texter4, 2500);
         setTimeout(starter, 2501);
         
-        
     }
-
 
 starter();
 
 
-// setTimeout(starter, 3500);
+
 
